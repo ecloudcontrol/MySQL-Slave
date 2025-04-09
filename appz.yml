@@ -1,0 +1,39 @@
+    app:
+        name: MySQL-Slave
+        code: mysql
+        notify: appzdev@cloudbourne.co
+
+    build:
+        version: 8.0
+        env: DEV
+        build_file: none
+        output_files: output/*.zip
+        image_template: mysql_slave-8.0
+
+    deploy:
+        context: tradeideas/DEV
+        type: statefulset
+        replicas: 1
+        ingress: none
+        resources: x-large
+        port:
+        - 3306
+
+    volumes:
+      - claim: mysql-data
+        mount: /var/lib/mysql
+        name: data
+        size: 250Gi
+      - claim: mysql-backup
+        mount: /appz/backup
+        name: backup
+        size: 250Gi
+
+    properties:
+        MYSQL_ROOT_PASSWORD:
+          vault: MYSQL_ROOT_PASSWORD_KEY
+        MYSQL_TRACKER_PASSWORD:
+          vault: MYSQL_MYDB_PASSWORD
+        MYSQL_ECLOUDCONTROL_PASSWORD:
+          vault: MYSQL_BARS_PASSWORD
+        revision : 6
