@@ -32,9 +32,7 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
+        MYSQL_REPLICATION_USER: replication
         MYSQL_REPLICATION_PASSWORD:
           vault : MYSQL_REPLICATION_PASSWORD
-        DB_MASTER: mysql-8-0
-        MYSQL_REPLICATION_USER: replication
-        
-        
+        DB_MASTER: mysql-8-0      
