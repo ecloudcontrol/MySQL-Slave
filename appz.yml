@@ -32,8 +32,8 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        MYSQL_TRACKER_PASSWORD:
-          vault: MYSQL_MYDB_PASSWORD
-        MYSQL_ECLOUDCONTROL_PASSWORD:
-          vault: MYSQL_BARS_PASSWORD
-        revision : 8
+        MYSQL_REPLICATION_PASSWORD:
+          vault : MYSQL_REPLICATION_PASSWORD
+        DB_MASTER: mysql-8-0
+        MYSQL_REPLICATION_USER: replication
+        
