@@ -29,12 +29,12 @@
         name: backup
         size: 250Gi
 
-properties:
-    MYSQL_REPLICATION_USER: replication
-    MYSQL_REPLICATION_PASSWORD:
-      vault: MYSQL_REPLICATION_PASSWORD
-    MYSQL_ROOT_PASSWORD:
-      vault: MYSQL_ROOT_PASSWORD_KEY
-    DB_MASTER: mysql-8-0
-    revision : 25
+    properties:
+        MYSQL_REPLICATION_USER: replication
+        MYSQL_REPLICATION_PASSWORD:
+          vault: MYSQL_REPLICATION_PASSWORD
+        MYSQL_ROOT_PASSWORD:
+          vault: MYSQL_ROOT_PASSWORD_KEY
+        DB_MASTER: mysql-8-0
+        revision : 25
      
