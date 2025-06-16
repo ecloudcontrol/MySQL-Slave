@@ -36,5 +36,5 @@
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
         DB_MASTER: mysql-8-0
-        revision : 29
+        revision : 30
      
