@@ -5,17 +5,17 @@
 
     build:
         version: 8.0
-        env: DEV
+        env: PROD
         build_file: none
         output_files: output/*.zip
         image_template: mysql_slave-8.0
 
     deploy:
-        context: tradeideas/DEV
+        context: tipreprod/PROD
         type: statefulset
         replicas: 1
         ingress: none
-        resources: x-large
+       # resources: x-large
         port:
         - 3306
 
@@ -24,16 +24,19 @@
         mount: /var/lib/mysql
         name: data
         size: 250Gi
+        matchLabels: false
       - claim: mysql-backup
         mount: /appz/backup
         name: backup
         size: 250Gi
+        matchLabels: false
 
     properties:
+        MYSQL_REPLICATION_USER: replication
+        MYSQL_REPLICATION_PASSWORD:
+          vault: MYSQL_REPLICATION_PASSWORD
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        MYSQL_TRACKER_PASSWORD:
-          vault: MYSQL_MYDB_PASSWORD
-        MYSQL_ECLOUDCONTROL_PASSWORD:
-          vault: MYSQL_BARS_PASSWORD
-        revision : 6
+        DB_MASTER: mysql-8-0
+        revision : 9
+     
