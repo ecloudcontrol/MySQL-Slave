@@ -32,11 +32,11 @@
         matchLabels: false
 
     properties:
-        MYSQL_REPLICATION_USER: replication
+        MYSQL_REPLICATION_USER: repl
         MYSQL_REPLICATION_PASSWORD:
           vault: MYSQL_REPLICATION_PASSWORD
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        DB_MASTER: mysql-8-0
+        DB_MASTER: 172.20.22.64
         revision : 10
      
