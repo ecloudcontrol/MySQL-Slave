@@ -1,10 +1,10 @@
     app:
-        name: MySQL-Slave
+        name: MySQL-Slave-new
         code: mysql
         notify: appzdev@cloudbourne.co
 
     build:
-        version: 8.0
+        version: 8.1
         env: PROD
         build_file: none
         output_files: output/*.zip
@@ -14,7 +14,7 @@
         context: tipreprod/PROD
         type: statefulset
         replicas: 1
-        ingress: none
+        #ingress: none
        # resources: x-large
         port:
         - 3306
