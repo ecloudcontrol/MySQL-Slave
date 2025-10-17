@@ -23,12 +23,12 @@
       - claim: mysql-data
         mount: /var/lib/mysql
         name: data
-        size: 250Gi
+        size: 300Gi
         matchLabels: false
       - claim: mysql-backup
         mount: /appz/backup
         name: backup
-        size: 250Gi
+        size: 400Gi
         matchLabels: false
 
     properties:
