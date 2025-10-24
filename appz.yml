@@ -4,7 +4,7 @@
         notify: appzdev@cloudbourne.co
 
     build:
-        version: 8.2
+        version: 8.1
         env: PROD
         build_file: none
         output_files: output/*.zip
@@ -21,14 +21,16 @@
 
     volumes:
       - claim: mysql-data
+        class: linode-block-storage
         mount: /var/lib/mysql
         name: data
         size: 300Gi
         matchLabels: false
       - claim: mysql-backup
+        class: linode-block-storage
         mount: /appz/backup
         name: backup
-        size: 400Gi
+        size: 300Gi
         matchLabels: false
 
     properties:
