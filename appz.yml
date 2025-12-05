@@ -40,5 +40,10 @@
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
         DB_MASTER: 172.20.22.64
+        SERVER_ID: 1
+        AUTO_INCREMENT_OFFSET: 2
+        RUN_AS_MASTER: true
+        GTID_ENABLED: false
+        
         revision : 4
      
