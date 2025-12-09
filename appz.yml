@@ -39,7 +39,6 @@
           vault: MYSQL_REPLICATION_PASSWORD
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        DB_MASTER: mysql-slave-8-2
         SERVER_ID: 1
         AUTO_INCREMENT_OFFSET: 2
         RUN_AS_MASTER: true
