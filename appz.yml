@@ -1,5 +1,5 @@
     app:
-        name: MySQL-Slave
+        name: MySQL-Slave-new
         code: mysql
         notify: appzdev@cloudbourne.co
 
