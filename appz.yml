@@ -4,7 +4,7 @@
         notify: appzdev@cloudbourne.co
 
     build:
-        version: 8.1
+        version: 8.2
         env: PROD
         build_file: none
         output_files: output/*.zip
@@ -40,9 +40,10 @@
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
         DB_MASTER: mysql-slave-8-2
-        SERVER_ID: 2
-        AUTO_INCREMENT_OFFSET: 2 
-        GTID_ENABLED: false
+        SERVER_ID: 1
+        AUTO_INCREMENT_OFFSET: 2
+        RUN_AS_MASTER: true
+        GTID_ENABLED: true
         BINLOG_EXPIRE_LOGS_SECONDS: 259200
         
         revision : 4
