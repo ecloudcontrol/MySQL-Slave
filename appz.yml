@@ -44,7 +44,7 @@
         RUN_AS_MASTER: 'true'
         GTID_ENABLED: 'true'
         BINLOG_EXPIRE_LOGS_SECONDS: 259200
-        DRY_RUN: true
+        DRY_RUN: false
         DAILY_KEEP_DAYS: 7
         WEEKLY_KEEP_WEEKS: 4
         MONTHLY_KEEP_MONTHS: 12
