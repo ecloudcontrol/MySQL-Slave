@@ -39,10 +39,6 @@
           vault: MYSQL_REPLICATION_PASSWORD
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        #SERVER_ID: 1
-       # AUTO_INCREMENT_OFFSET: 2
-        #RUN_AS_MASTER: 'true'
-        #GTID_ENABLED: 'true'
         BINLOG_EXPIRE_LOGS_SECONDS: 259200
         DRY_RUN: false
         DAILY_KEEP_DAYS: 7
