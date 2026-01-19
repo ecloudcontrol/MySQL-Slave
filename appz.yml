@@ -24,13 +24,13 @@
         class: linode-block-storage
         mount: /var/lib/mysql
         name: data
-        size: 250Gi
+        size: 500Gi
         matchLabels: false
       - claim: mysql-backup
         class: linode-block-storage
         mount: /appz/backup
         name: backup
-        size: 300Gi
+        size: 500Gi
         matchLabels: false
 
     properties:
