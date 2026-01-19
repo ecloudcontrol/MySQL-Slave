@@ -24,7 +24,7 @@
         class: linode-block-storage
         mount: /var/lib/mysql
         name: data
-        size: 300Gi
+        size: 250Gi
         matchLabels: false
       - claim: mysql-backup
         class: linode-block-storage
@@ -34,15 +34,15 @@
         matchLabels: false
 
     properties:
-        MYSQL_REPLICATION_USER: repl
+        MYSQL_REPLICATION_USER: replication
         MYSQL_REPLICATION_PASSWORD:
           vault: MYSQL_REPLICATION_PASSWORD
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        SERVER_ID: 1
-        AUTO_INCREMENT_OFFSET: 2
-        RUN_AS_MASTER: 'true'
-        GTID_ENABLED: 'true'
+        #SERVER_ID: 1
+       # AUTO_INCREMENT_OFFSET: 2
+        #RUN_AS_MASTER: 'true'
+        #GTID_ENABLED: 'true'
         BINLOG_EXPIRE_LOGS_SECONDS: 259200
         DRY_RUN: false
         DAILY_KEEP_DAYS: 7
@@ -56,5 +56,6 @@
         AKAMAI_ENDPOINT: https://us-iad-10.linodeobjects.com
         AKAMAI_REGION: us-iad-10
         DB_MASTER: 10.10.51.147
+        BACKUP_RETENTION: 1
         revision : 14
      
