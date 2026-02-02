@@ -4,7 +4,7 @@
         notify: appzdev@cloudbourne.co
 
     build:
-        version: 8.1
+        version: 8.3
         env: PROD
         build_file: none
         output_files: output/*.zip
@@ -51,7 +51,8 @@
         AKAMAI_BUCKET: mysql-backup
         AKAMAI_ENDPOINT: https://us-iad-10.linodeobjects.com
         AKAMAI_REGION: us-iad-10
-        DB_MASTER: 10.10.51.147
+        DB_MASTER: mysql-8-2
+        RUN_AS_MASTER: 1
         BACKUP_RETENTION: 1
         revision : 23
      
