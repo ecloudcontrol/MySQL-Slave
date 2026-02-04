@@ -55,7 +55,7 @@
         RUN_AS_MASTER: 1
         SERVER_ID: 2
         AUTO_INCREMENT_OFFSET: 2
-        GTID_ENABLED: 0
+        GTID_ENABLED: 1
         BACKUP_RETENTION: 1
         revision : 23
      
